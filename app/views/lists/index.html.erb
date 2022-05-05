@@ -1,0 +1,11 @@
+<h1 class='p-5'>Lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li><i class="far fa-check-circle"></i><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<div class='p-5'>
+  <%= link_to "New list", new_list_path, class: 'btn btn-primary' %>
+</div>

@@ -1,0 +1,8 @@
+<h1 class= 'p-5'><%= @list.name %></h1>
+<% @list.movies.each do |m| %>
+  <% bkm = Bookmark.find_by(list: @list, movie: m) %>
+  <%= m.title %> <br> <%= bkm.comment %><br><br>
+  <%= link_to "Borrar comentario", bookmark_path(bkm), method: :delete, data: { confirm: "Estas seguro?" } %><br><br>
+<% end %>
+<br><br>
+<%= link_to "Volver", lists_path %>
