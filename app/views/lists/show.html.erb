@@ -5,4 +5,7 @@
   <%= link_to "Borrar comentario", bookmark_path(bkm), method: :delete, data: { confirm: "Estas seguro?" } %><br><br>
 <% end %>
 <br><br>
-<%= link_to "Volver", lists_path %>
+<%= link_to "Volver", lists_path, class: 'btn btn-primary' %>
+<br><br>
+
+<%= link_to "Dejar comentario", new_list_bookmark_path(@list), class: 'btn btn-primary' %>
